@@ -6,7 +6,7 @@ import {Observable} from 'rxjs'
  *
  */
 export default (replacement: string) => (source: Observable<string>) =>
-    new Observable(observer => {
+    new Observable<string>(observer => {
         return source.subscribe({
             next(value) {
                 observer.next(
